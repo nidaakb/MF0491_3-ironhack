@@ -1,5 +1,10 @@
-async function getPuzzle(wordCount) {
-    let hiddenSentence = "Buena Suerte";
+const getPuzzle = async (wordCount) => {
+    const response = await fetch ('https://puzzle.mead.io/puzzle?wordCount=2');
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
 
-    return hiddenSentence;
-}
+    return data.puzzle;
+
+};
+

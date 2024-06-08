@@ -16,7 +16,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     padding: 32px;
-    background-color: #d5d5df;
+    background-color: #000072;
     color: #fff;
     border-bottom: 4px solid #fdb347;
 }
@@ -24,6 +24,10 @@ body {
 .gallery {
     margin: 0 auto;
     padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .gallery img {
@@ -32,4 +36,22 @@ body {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(raspitas.jpg);
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+
+    .gallery img {
+        max-width: 100%;
+    }
+
 }
